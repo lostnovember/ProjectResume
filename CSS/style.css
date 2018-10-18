@@ -1,0 +1,231 @@
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    background-color: #ffffff;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #782F40;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #782F40;
+    color: white;
+}
+
+div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: auto;
+
+}
+
+@media screen and (max-width: 900px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
+    }
+}
+
+  /* jumbotron */
+.jumbotron-fluid{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align:center;
+    color: #782F40;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif ;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: min-content;
+    padding-left: 11%;
+    padding-right: 10%;
+    padding-top: 0%;
+    padding-bottom: 5%;
+    
+}
+.active-item{
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    height:500px;
+    
+}
+
+.carousel-inner{
+    justify-content: center;
+    align-items: center;
+    width:minmax(100px,400px);
+    height:minmax(100px,400px);
+ 
+}
+
+.item{
+    justify-content: right;
+    align-items: center;
+    width: auto;
+    height: fit-content;
+   
+}
+
+.header{
+    
+    float: center;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 3px;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif ;
+    color: #782F40;
+}
+
+.container, {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.text-box1 {
+    float: center;
+    background: rgb(235, 231, 231);
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 3px;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif ;
+    color: #782F40;
+}
+
+.text-box2 {
+    float: center;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 3px;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif ;
+    color: #782F40;
+    
+}
+
+.text-box3 {
+    float: center;
+    background: rgb(235, 231, 231);
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 3px;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif ;
+    color: #782F40;
+}
+
+
+.text-box4 {
+    float: center;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif ;
+    color: #782F40;
+    
+}
+
+.h3, h4{
+    text-align: center;
+    
+}
+div.wrapper{
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    grid-column-gap: .2em;
+    grid-auto-rows: minmax(100px,auto);
+    grid-row-gap: .2em;
+        
+}
+/*Img gallery after hobbies */
+div.gallery {
+    border: 1px solid #ccc;
+    align-content: right;
+    padding-top: 2px;
+    padding-left: 1px;
+    padding-right: 1px;
+    background:rgb(235, 231, 231);
+}
+
+div.gallery:hover {
+    border: 2px solid #777;
+}
+
+div.gallery img {
+    width: 300px;
+    height: 300px;
+       
+}
+
+div.desc {
+    padding: 10px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container2, {
+    width: 100%;
+    float: center;
+    padding-right: 5%;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    align-content: center;
+}
+
+
+/* @media - always at the bottom */
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: auto;
+    }
+}
