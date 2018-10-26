@@ -1,8 +1,19 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 5px;
+    grid-auto-rows: minmax(5px, auto);
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+}
+
 ul.sidenav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 10%;
+    width: 1fr;
     background-color: #ffffff;
     position: fixed;
     height: 100%;
@@ -26,73 +37,69 @@ ul.sidenav li a:hover:not(.active) {
     color: white;
 }
 
-div.content {
-    margin-left: 25%;
-    padding: 1px 16px;
-    height: auto;
 
-}
 
   /* jumbotron */
-.jumbotron-fluid{
+  .jumbotron-fluid{
+    grid-column: 2 / span 3;
     display: flex;
     flex-direction: column-reverse;
-    text-align:center;
     color: #782F40;
     font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif ;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: min-content;
-    padding-left: 11%;
-    padding-right: 10%;
-    padding-top: 0%;
+    padding-top: 5%;
     padding-bottom: 5%;
+    margin-bottom: 5px;
     
 }
+
 .active-item{
     justify-content: center;
     align-items: center;
     width:auto;
-    height:500px;
-    
+          
 }
 
 .carousel-inner{
     justify-content: center;
     align-items: center;
-    width:minmax(100px,400px);
-    height:minmax(100px,400px);
- 
+      
+}
+
+.carousel-inner{
+    grid-column: 2 / span 3;
+    
+    height: auto;
+    width: auto;
+}
+
+.carousel-inner img{
+    grid-column: 2 / span 3;
+    float: center;
+    height: 800px;
+    width: 800px;
 }
 
 .item{
-    justify-content: right;
     align-items: center;
     width: auto;
-    height: fit-content;
-   
+     
 }
 
 .header{
-    
-    float: center;
-    width: 100%;
-    padding-top: 8px;
-    padding-bottom: 3px;
-    padding-right: 10%;
-    padding-left: 10%;
+    grid-column: 2 / span 3;
     font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif ;
     color: #782F40;
+    float: right;
+    text-align: center;
+    padding-bottom: 10px;
+
 }
 
-.container, {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+.wrapper{
+    grid-column: 2 / span 3;
+
 }
 
 .text-box1 {
@@ -119,88 +126,34 @@ div.content {
     color: #782F40;
     
 }
+.text-box2 img{
+    height: 45px;
+    width: 45px;
+}
+.text-box2 img:hover{
+    transform: scale(1.1);
+    }
 
-.text-box3 {
-    float: center;
-    background: rgb(235, 231, 231);
-    width: 100%;
-    padding-top: 8px;
-    padding-bottom: 3px;
-    padding-right: 10%;
-    padding-left: 10%;
-    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif ;
-    color: #782F40;
+.gallery {
+    grid-column: 2 / span 3;
+    margin: 5px 15px;
 }
 
-
-.text-box4 {
-    float: center;
-    width: 100%;
-    padding-top: 8px;
-    padding-bottom: 5px;
-    padding-right: 10%;
-    padding-left: 10%;
-    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif ;
-    color: #782F40;
-    
+.gallery img{
+    transition: 1s;
+    padding-left: 5px;
+    width: 200px;
 }
 
-.h3, h4{
-    text-align: center;
-    
+.gallery img:hover{
+    filter: sepia(.50);
+    transform: scale(1.2);
 }
-div.wrapper{
-    display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
-    grid-column-gap: .2em;
-    grid-auto-rows: minmax(100px,auto);
-    grid-row-gap: .2em;
-        
-}
-/*Img gallery after hobbies */
-div.gallery {
-    border: 1px solid #ccc;
-    align-content: right;
-    padding-top: 2px;
-    padding-left: 1px;
-    padding-right: 1px;
-    background:rgb(235, 231, 231);
-}
-
-div.gallery:hover {
-    border: 2px solid #777;
-}
-
-div.gallery img {
-    width: 300px;
-    height: 300px;
-       
-}
-
-div.desc {
-    padding: 10px;
-    text-align: center;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.container2, {
-    width: 100%;
-    float: center;
-    padding-right: 5%;
-    padding-left: 10%;
-    padding-top: 5%;
-    padding-bottom: 10%;
-    align-content: center;
-}
-
 
 /* @media - always at the bottom */
 @media only screen and (max-width: 700px) {
     .responsive {
-        width: 49.99999%;
+        width: auto;
         margin: 6px 0;
     }
 }
